@@ -71,7 +71,7 @@ function ajax(url, cb){
 		"Cache-Control": "max-age=0"
 	}};
 
-	http.get(options, function(res) {
+	var req = http.get(options, function(res) {
 		console.log("Resposta: " + res.statusCode);
 
 		res.on("data", function(chunk) {
@@ -85,7 +85,15 @@ function ajax(url, cb){
 		res.on("error", function (e) {
 			console.log(e.message);
 		});
+
 	});
+
+	req.on("error", function (e) {
+	console.log("-----------------");
+	console.log("servidor fora...");
+	console.log(e.message);
+	});
+
 }
 // Fim [ajax]
 
