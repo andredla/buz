@@ -6,10 +6,12 @@ input[type="text"] {border: none;}
 .input {position: relative; display: inline-block; padding: 0.4em; width: 5em; border: 1px solid #ccc;}
 .input input {width: 100%;}
 
-.lightbox {position: relative; display: inline-block; width: 300px; z-index: 3;}
-.lightbox .lightbox_body {position: relative; display: block; padding: 1em 0em; background-color: #fff; border: 1px solid #ccc;}
-.lightbox .lightbox_body .item {position: relative; display: block; padding: 0.2em; font-size: 14px;}
-.lightbox .end {position: absolute; display: inline-block; bottom: -48px; left: 50%; -webkit-transform: translateX(-50%);}
+.lightbox {position: absolute; display: inline-block; padding: 1em; font-size: 20px; font-weight: bold; color: #444; background-color: #ffffff; border: 1px solid #ccc;}
+
+.overlay {position: relative; display: inline-block; width: 300px; z-index: 3;}
+.overlay .overlay_body {position: relative; display: block; padding: 1em 0em; background-color: #fff; border: 1px solid #ccc;}
+.overlay .overlay_body .item {position: relative; display: block; padding: 0.2em; font-size: 14px;}
+.overlay .end {position: absolute; display: inline-block; bottom: -48px; left: 50%; -webkit-transform: translateX(-50%);}
 
 .mapa {position: relative; display: block; width: 100%; height: 100%; z-index: 1;}
 .square {position: absolute; display: inline-block; padding: 1em; background-color: #fff;}
