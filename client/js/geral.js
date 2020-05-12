@@ -39,7 +39,9 @@ function buscar_ok(data){
 // Inicio [update_ok]
 function update_ok(data){
 	data_bus = $.parseJSON(data.body);
-	buscar();
+	if(data_bus){
+		buscar();
+	}
 	return false;
 }
 // Fim [update_ok]
@@ -80,8 +82,8 @@ function init_map(){
 			//view.setCenter(ol.proj.fromLonLat([lon, lat]));
 			//view.setZoom(16);
 
-			var div = $("<div class='lightbox' id='"+ordem+"'></div>");
-			var span = $("<span class='lightbox_body'></span>");
+			var div = $("<div class='overlay' id='"+ordem+"'></div>");
+			var span = $("<span class='overlay_body'></span>");
 			var span_datahora = $("<span class='item'>datahora: "+datahora+"</span>");
 			var span_ordem = $("<span class='item'>ordem: "+ordem+"</span>");
 			var span_linha = $("<span class='item'>linha: "+linha+"</span>");
@@ -132,7 +134,7 @@ function init_map(){
 
 // Inicio [removeOverlay]
 function removeOverlay(){
-		$(".lightbox").remove();
+		$(".overlay").remove();
 		if(olayer){
 			olayer.setPosition(undefined);
 			omapa.removeOverlay(olayer);
@@ -215,10 +217,26 @@ function buscar(){
 			}
 		}
 		render(data_filtro);
+	}else{
+		app_alerta({alerta:{txt: "Servidor fora..."}});
 	}
 	return false;
 }
 // Fim [buscar]
+
+// Inicio [app_alerta]
+function app_alerta(data){
+	data_old = data;
+	var alerta = $("#alerta");
+	if(data.alerta){
+		//console.log("app_alerta...");
+		alerta.html(data.alerta.txt);
+		bi.LightboxExibe({lightbox: "alerta"});
+		setTimeout(function(){ bi.LightboxEsconde({lightbox: "alerta"}); }, 1500);
+	}
+	return false;
+}
+// Fim [app_alerta]
 
 // Inicio [update]
 function update(){
@@ -237,6 +255,7 @@ function update(){
 		data_bus = json;
 	});
 	*/
+	
 	return false;
 }
 // Fim [update]
