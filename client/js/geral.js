@@ -6,7 +6,13 @@ var omapa = null;
 var omarker = [];
 var olayer = null;
 
+var linhas = {};
+
 var ponto_inicio = {lat: -22.987, lon: -43.2047};
+
+	$.getJSON("/client/js/linhas.json", function(json){
+		linhas = json;
+	});
 
 // Inicio [socket_recebe]
 socket.on("conn_init", conn_init);
@@ -208,8 +214,18 @@ function render(arr){
 function buscar(){
 	removeOverlay();
 	data_filtro = [];
+	var linha = $("#linha").val();
+	var linha_html = $(".linha");
+	linha_html.html("");
+	//console.log(linhas);
+	for(var line in linhas){
+		var l = linhas[line];
+		if(l.hasOwnProperty(linha)){
+			linha_html.html(l[linha].nome);
+		}
+	}
 	if(data_bus){
-		var linha = parseInt($("#linha").val());
+		var linha = parseInt(linha);
 		for(var item in data_bus.DATA){
 			var i = data_bus.DATA[item];
 			if(i[2] == linha){
