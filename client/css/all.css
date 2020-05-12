@@ -1,0 +1,19 @@
+* {margin: 0px; padding: 0px; vertical-align: middle; touch-action: manipulation;}
+
+html, body {height: 100%; text-align: center; background: #f6f6f6; font-family: Arial; font-size: 16px; -webkit-user-select: none; overflow: hidden;}
+input[type="text"] {border: none;}
+.btn {position: relative; display: inline-block; padding: 0.4em; text-decoration: none; color: #fff; background-color: #5787de; border: 1px solid #345592;}
+.input {position: relative; display: inline-block; padding: 0.4em; width: 5em; border: 1px solid #ccc;}
+.input input {width: 100%;}
+
+.lightbox {position: relative; display: inline-block; width: 300px; z-index: 3;}
+.lightbox .lightbox_body {position: relative; display: block; padding: 1em 0em; background-color: #fff; border: 1px solid #ccc;}
+.lightbox .lightbox_body .item {position: relative; display: block; padding: 0.2em; font-size: 14px;}
+.lightbox .end {position: absolute; display: inline-block; bottom: -48px; left: 50%; -webkit-transform: translateX(-50%);}
+
+.mapa {position: relative; display: block; width: 100%; height: 100%; z-index: 1;}
+.square {position: absolute; display: inline-block; padding: 1em; background-color: #fff;}
+.busca {position: absolute; display: inline-block; left: 3em; top: 0.5em; padding: 0.7em; background-color: #ffffff; border: 1px solid #ccc; z-index: 2;}
+
+@media (max-width: 725px) {
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content = "-1" />
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Buz</title>
+<link href="client/css/omapa.css" rel="stylesheet" type="text/css">
+<link href="client/css/jquery-ui.structure.css" rel="stylesheet" type="text/css">
+<link href="client/css/jquery-ui.css" rel="stylesheet" type="text/css">
+<link href="client/css/all.css" rel="stylesheet" type="text/css">
+<link href="client/css/animate.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="client/js/socket.io-1.4.5.js" type="text/javascript"></script>
+<script language="JavaScript" src="client/js/jquery.js" type="text/javascript"></script>
+<script language="JavaScript" src="client/js/jquery-ui.min.js" type="text/javascript"></script>
+<script language="JavaScript" src="client/js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+<script language="JavaScript" src="client/js/jquery_cookie.js" type="text/javascript"></script>
+<script language="JavaScript" src="client/js/tinycolor.js" type="text/javascript"></script>
+<script language="JavaScript" src="client/js/biblioteca.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//var socket = io();
+	var socket = io({transports: ["websocket"], upgrade: false});
+</script>
+<script src="client/js/omapa_min.js"></script>
+<script language="JavaScript" src="client/js/geral.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<!-- Inicio [mapa] -->
+	<div class="busca">
+		<span class="input"><input type="text" id="linha" value=""></span>
+		<a href="#" class="btn" onclick="return buscar();">Buscar</a>
+	</div>
+	<!-- Fim [mapa] -->
+
+	<!-- Inicio [mapa] -->
+	<div id="mapa" class="mapa"></div>
+	<!-- Fim [mapa] -->
+
+</body>
+</html>
