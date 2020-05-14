@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="50"
+   width="50"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="help.svg">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="799"
+     inkscape:window-height="564"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="5.448472"
+     inkscape:cx="25.226889"
+     inkscape:cy="21.579628"
+     inkscape:window-x="419"
+     inkscape:window-y="395"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <path
+     d="m 22.028487,36.886052 5.943027,0 0,-5.943025 -5.943027,0 0,5.943025 z M 25,13.113946 c 0,0 -8.914539,0 -8.914539,8.91454 0.371438,0.0624 5.943026,0 5.943026,0 0,0 0,-2.971513 2.971513,-2.971513 2.971514,0 2.971514,2.971513 2.971514,2.971513 C 27.971514,25 21.945796,25 21.945796,27.971513 l 6.025718,0 c 0,0 5.943026,0 5.943026,-7.428783 C 33.91454,13.113946 25,13.113946 25,13.113946 Z M 25,1.2278937 C 11.871948,1.2278937 1.227894,11.871946 1.227894,25 1.227894,38.128052 11.871948,48.772106 25,48.772106 38.128055,48.772106 48.772106,38.128052 48.772106,25 48.772106,11.871946 38.128055,1.2278937 25,1.2278937 Z M 25,42.829079 C 15.155423,42.829079 7.1709206,34.843137 7.1709206,25 7.1709206,15.155423 15.155423,7.1709201 25,7.1709201 c 9.843138,0 17.829082,7.9845029 17.829082,17.8290799 0,9.843137 -7.985944,17.829079 -17.829082,17.829079 z"
+     id="path4"
+     inkscape:connector-curvature="0"
+     style="fill:#5787de" />
+</svg>
