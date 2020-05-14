@@ -276,6 +276,39 @@ function update(){
 }
 // Fim [update]
 
+// Inicio [help_buscar]
+function help_buscar(num){
+	bi.LightboxEsconde({lightbox: "bus_linhas"});
+	$("#linha").val(num);
+	buscar();
+	return false;
+}
+// Fim [help_buscar]
+
+// Inicio [buz_help]
+function buz_help(){
+	var div = $("#bus_linhas");
+	div.html("");
+	for(var linha in linhas){
+		var l = linhas[linha];
+		var grupo = $("<span class='linhas_grupo'></span>");
+		var head = $("<span class='linhas_head'>"+linha+"</span>");
+		var body = $("<span class='linhas_body'></span>");
+		//console.log(l);
+		for(var bus in l){
+			var nome = l[bus].nome
+			//console.log(bus, nome);
+			body.append("<span class='linhas_item' onclick=\"return help_buscar('"+bus+"');\">"+bus+" - "+nome+"</span>");
+		}
+		grupo.append(head);
+		grupo.append(body);
+		div.append(grupo);
+	}
+	bi.LightboxExibe({lightbox: "bus_linhas"});
+	return false;
+}
+// Fim [buz_help]
+
 $(function(){
 	bi.LightboxExibe({lightbox: "load"});
 	init_map();
