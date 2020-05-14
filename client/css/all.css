@@ -17,6 +17,13 @@ input[type="text"] {border: none;}
 .square {position: absolute; display: inline-block; padding: 1em; background-color: #fff;}
 .busca {position: absolute; display: inline-block; left: 3em; top: 0.5em; padding: 0.7em; background-color: #ffffff; border: 1px solid #ccc; z-index: 2;}
 .busca .linha {position: relative; display: inline-block; padding: 0.5em; font-size: 14px; color: #777;}
+.busca .help {position: relative; display: inline-block; padding: 18px; background: url('../imgs/help.svg') center no-repeat; background-size: 30px; cursor: pointer;}
+
+#bus_linhas {max-height: 800px; overflow: auto;}
+.linhas_grupo {position: relative; display: block; margin-bottom: 50px; font-size: 14px;}
+.linhas_grupo .linhas_head {position: relative; display: block; padding: 0.5em; background-color: #eee; border: 1px solid #ccc;}
+.linhas_grupo .linhas_body {position: relative; display: block;}
+.linhas_grupo .linhas_body .linhas_item {position: relative; display: block; padding: 0.5em; border-bottom: 1px solid #ccc; cursor: pointer;}
 
 @media (max-width: 725px) {
 }
