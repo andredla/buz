@@ -35,7 +35,18 @@ function update(data){
 	console.log("-----------------");
 	console.log("update...");
 	console.log(data);
-	io.sockets.sockets[data.socket].emit("update_ok", {body: data_bus});
+	data_bus_temp = {DATA: []};
+	data_bus_json = JSON.parse(data_bus);
+	if(data.linha != ""){
+		for(var bus in data_bus_json.DATA){
+			var b = data_bus_json.DATA[bus];
+			if(b[2] == parseInt(data.linha)){
+				data_bus_temp.DATA.push(b);
+			}
+		}
+	}
+	//console.log(data_bus_temp);
+	io.sockets.sockets[data.socket].emit("update_ok", {body: data_bus_temp});
 }
 // Fim [update]
 
@@ -44,6 +55,7 @@ function update_serv(){
 	console.log("-----------------");
 	console.log("update_serv...");
 	//data_bus = require("./client/js/dados.json");
+	//return false;
 	ajax(dados, function(resp){
 		//console.log(resp);
 		data_bus = resp;
