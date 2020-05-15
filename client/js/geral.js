@@ -44,9 +44,10 @@ function buscar_ok(data){
 
 // Inicio [update_ok]
 function update_ok(data){
-	data_bus = $.parseJSON(data.body);
+	//data_bus = $.parseJSON(data.body);
+	data_bus = data.body;
 	if(data_bus){
-		buscar();
+		buscar(0);
 	}
 	return false;
 }
@@ -211,7 +212,10 @@ function render(arr){
 // Fim [render]
 
 // Inicio [buscar]
-function buscar(){
+function buscar(flag){
+	if(flag){
+		update();
+	}
 	removeOverlay();
 	data_filtro = [];
 	var linha = $("#linha").val();
@@ -257,7 +261,8 @@ function app_alerta(data){
 // Inicio [update]
 function update(){
 		console.log("update...");
-		socket.emit("update", {socket: socket_id});
+		var linha = $("#linha").val();
+		socket.emit("update", {socket: socket_id, linha: linha});
 		/*
 		$.ajax({ url: "http://dadosabertos.rio.rj.gov.br/apiTransporte/apresentacao/rest/index.cfm/obterTodasPosicoes", context: "", success: function(resposta, status, xhr){
 			//console.log(resposta);
@@ -280,7 +285,7 @@ function update(){
 function help_buscar(num){
 	bi.LightboxEsconde({lightbox: "bus_linhas"});
 	$("#linha").val(num);
-	buscar();
+	buscar(1);
 	return false;
 }
 // Fim [help_buscar]
