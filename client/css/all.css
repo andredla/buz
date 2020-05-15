@@ -19,7 +19,7 @@ input[type="text"] {border: none;}
 .busca .linha {position: relative; display: inline-block; padding: 0.5em; font-size: 14px; color: #777;}
 .busca .help {position: relative; display: inline-block; padding: 18px; background: url('../imgs/help.svg') center no-repeat; background-size: 30px; cursor: pointer;}
 
-#bus_linhas {max-height: 800px; overflow: auto;}
+#bus_linhas {max-height: 800px; overflow: auto; -webkit-overflow-scrolling: touch;}
 .linhas_grupo {position: relative; display: block; margin-bottom: 50px; font-size: 14px;}
 .linhas_grupo .linhas_head {position: relative; display: block; padding: 0.5em; background-color: #eee; border: 1px solid #ccc;}
 .linhas_grupo .linhas_body {position: relative; display: block;}
